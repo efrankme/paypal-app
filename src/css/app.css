@@ -1,0 +1,7 @@
+/* app global css */
+
+input[type="number"] {
+  -webkit-appearance: textfield !important;
+  margin: 0;
+  -moz-appearance: textfield !important;
+}
