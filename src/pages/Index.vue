@@ -143,10 +143,15 @@ export default {
     },
 
     calculoEnviar() {
-      this.seReciben = this.formatNumero(
+      if (this.seEnvian == "" || this.seEnvian == 0) {
+        this.seReciben = null;
+        this.comiEnviar = null;
+      } else {
+        this.seReciben = this.formatNumero(
         this.seEnvian - ((this.porcentaje * this.seEnvian) / 100 + this.tasa)
       );
       this.comiEnviar = this.formatNumero(this.seEnvian - this.seReciben);
+      }
     },
 
     formatNumero(valor) {
